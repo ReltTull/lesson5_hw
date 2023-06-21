@@ -18,13 +18,15 @@ public class Tree {
         if (files == null)
             return;
 
+        // подсчитываем общее количество директорий (subDirTotal) и файлов (fileTotal), чтобы на эти переменные
+        // опираться при использовании boolean isLast
         int subDirTotal = 0;
-        int fileTotal = 0;
+        int filesTotal = 0;
         for (int i = 0; i < files.length; i++) {
             if (files[i].isDirectory())
                 subDirTotal++;
             else if (files[i].isFile()) {
-                fileTotal++;
+                filesTotal++;
             }
         }
 
@@ -36,7 +38,7 @@ public class Tree {
                 print(files[i], indent, subDirCounter == subDirTotal - 1);
                 subDirCounter++;
             } else if (files[i].isFile()) {
-                print(files[i], indent, fileCounter == fileTotal - 1);
+                print(files[i], indent, fileCounter == filesTotal - 1);
                 fileCounter++;
             }
         }
