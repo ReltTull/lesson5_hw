@@ -33,18 +33,27 @@ public class Program {
 //        concatenate("sample01.txt", "sample02.txt", "sample01_out.txt");
 //        System.out.println(searchInFile("sample01_out.txt", TO_SEARCH));
 
-        Tree.print(new File("."), " ", true);
+//        Tree.print(new File("."), " ", true);
+//
+//
+//        try {
+//            BackUper backUper = new BackUper("C:/Users/LAPTOP-UR8/IdeaProjects/lesson5",
+//                    "C:/Users/LAPTOP-UR8/IdeaProjects/lesson5/bu");
+//            BackUper.createBackup();
+//            System.out.print("Back up completed.");
+//        } catch (IOException e) {
+//            System.out.print(e.getMessage());
+//        }
 
 
-        try {
-            BackUper backUper = new BackUper("C:/Users/LAPTOP-UR8/IdeaProjects/lesson5",
-                    "C:/Users/LAPTOP-UR8/IdeaProjects/lesson5/bu");
-            BackUper.createBackup();
-            System.out.print("Back up completed.");
+
+        byte[] values = {0, 1, 2, 3, 2, 0, 1, 3, 1};
+        try (FileOutputStream fileOutputStream = new FileOutputStream("task3.txt")) {
+            fileOutputStream.write(values);
+            System.out.print("FIle successfully recorded.");
         } catch (IOException e) {
             System.out.print(e.getMessage());
         }
-
 
 //        String[] fileNames = new String[10];
 //        for (int i = 0; i < fileNames.length; i++){
