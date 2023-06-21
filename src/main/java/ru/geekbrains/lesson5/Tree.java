@@ -19,17 +19,25 @@ public class Tree {
             return;
 
         int subDirTotal = 0;
+        int fileTotal = 0;
         for (int i = 0; i < files.length; i++) {
             if (files[i].isDirectory())
                 subDirTotal++;
+            else if (files[i].isFile()) {
+                fileTotal++;
+            }
         }
 
-        // Доделать!!!
+
         int subDirCounter = 0;
+        int fileCounter = 0;
         for (int i = 0; i < files.length; i++) {
             if (files[i].isDirectory()) {
                 print(files[i], indent, subDirCounter == subDirTotal - 1);
                 subDirCounter++;
+            } else if (files[i].isFile()) {
+                print(files[i], indent, fileCounter == fileTotal - 1);
+                fileCounter++;
             }
         }
     }
