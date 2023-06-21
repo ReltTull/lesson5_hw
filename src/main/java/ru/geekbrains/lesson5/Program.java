@@ -35,14 +35,15 @@ public class Program {
 
         Tree.print(new File("."), " ", true);
 
-//        try {
-//            BackUper backUper = new BackUper("C:/Users/roman.LAPTOP-UOUKIJR8/IdeaProjects/lesson5",
-//                    "C:/Users/roman.LAPTOP-UOUKIJR8/IdeaProjects/lesson5/bu");
-//            BackUper.createBackup();
-//            System.out.print("Back up complited.");
-//        } catch (IOException e) {
-//            System.out.print(e.getMessage());
-//        }
+
+        try {
+            BackUper backUper = new BackUper("C:/Users/LAPTOP-UR8/IdeaProjects/lesson5",
+                    "C:/Users/LAPTOP-UR8/IdeaProjects/lesson5/bu");
+            BackUper.createBackup();
+            System.out.print("Back up completed.");
+        } catch (IOException e) {
+            System.out.print(e.getMessage());
+        }
 
 
 //        String[] fileNames = new String[10];
